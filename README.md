@@ -5,7 +5,7 @@ This repository contains all custom multiplayer maps used by the IRANCOJ communi
 These maps are automatically downloaded by the **IRANCOJ Auto Map Downloader Launcher**, ensuring all players remain up to date with the latest map pack.
 
 ## Repository Structure
-- `/maps/` – All .pak map files
+- `/MapsNet` – All .pak map files
 - `manifest.json` – Map list with hashes for version checking
 
 ## Launcher
