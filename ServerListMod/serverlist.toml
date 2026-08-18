@@ -1,0 +1,117 @@
+[miscellaneous]
+# DEPRECATED
+# Bind game to 27632 port to get serverlist.
+# Required to get serverlist from gameranger + SNAT server (without server files modification)
+# Option is restricting one game instance per computer, not required when server has removed serverlist broadcasting.
+# Remove option or set to -1 to disable it.
+# Use it only when server in `known_servers` requires it to display serverlist.
+# Uncomment next line to enable:
+# bind_to_port = 27632
+# Logging level. Possible values: 'debug' or 'info' or 'warning' or 'error' or 'none'
+log_level = 'error'
+
+
+[game]
+# Change FOV (in degrees), game by default use 46.8 degrees FOV.
+# To set FOV uncomment `fov = 60.0` and replace 60.0 with FOV you want
+# fov = 60.0
+# Set ping display mode:
+# Possible values: 'default' or 'numbers' or 'colored_numbers'
+# 'colored_numbers' is recommended. Use 'default' option if you want original icons instead of numbers.
+ping_display = 'colored_numbers'
+
+# Extra stats column display option (known as KD mod):
+# To disable KD mod, comment out or remove at least one option: `stats_column_1` or stats_column_2`
+# Possible values: 'kills' or 'deaths' or 'accuracy' or 'kd_balance' or 'kd_ratio'
+stats_column_1 = 'accuracy'
+stats_column_2 = 'kd_ratio'
+
+
+[serverlist]
+# Known server list in format <ip/hostname>:<port>
+# Example:
+# known_servers = [
+#     "12.34.56.78:27632",
+#     "10.10.10.10:27631",
+#     "server1.example.com:27632"
+# ]
+# Option was left for backward compatibility purposes
+# Is recommended to use server list fetched from gamespy services
+# You can safely remove it
+# Added two servers, old way, just in case. It will be removed in the next updates.
+known_servers = [
+    "51.77.44.173:27632",
+    "51.77.44.173:27634"
+]
+
+
+[serverlist.scan]
+# Max time for server list scan
+max_time = 15.0
+# Min time for server list scan
+min_time = 1.5
+# Serverlist scanning time will be advanced by `new_server_time` when
+# game asking server for info (description, map, gamemode, ...)
+new_server_time = 1.5
+
+
+[gamespy]
+enabled = true
+game_name = "coj2"
+game_secret_key = "H0bx87"
+# Domain for all gamespy services
+# Master server addresses can be overridden in subsequent options
+# for testing or when you want to use domain-less gamespy master servers
+domain = "openspy.net"
+
+
+[gamespy.natneg]
+# Detect NAT type on server/game startup and log it into .log file
+# Set to true if you want to check your NAT type then set to false
+nat_detection_enabled = false
+# NATNEG servers. Orders of servers matters
+# Option is used for overriding domain NATNEG servers
+# server1_address = "89.2.5.35:27901"
+# server2_address = "189.200.178.97:27901"
+# server3_address = "34.145.210.221:27901"
+
+
+[gamespy.natneg.scan]
+# Serverlist scanning time will be advanced by `connect_time` when
+# master server sends new private ip server
+connect_time = 1.5
+# Serverlist scanning time will be advanced by `negport_recv_time` when
+# network activity detected on NATNEG port
+negport_recv_time = 1.5
+# Serverlist scanning time will be advanced by `gameport_recv_time` when
+# NATNEG network activity detected on game port
+gameport_recv_time = 6.0
+
+
+[gamespy.server]
+# Master server ip for server
+# option is used for overriding domain master server
+# server_address = "89.2.5.35:27900"
+# Disabling NAT traversal is recommended if all required ports are forwarded
+# when server is accessible by -join <public_ip>:<port>
+# NAT negotiated servers are requiring more time to establish connection
+# Set this option to true if you have private ip
+nat_traversal_enabled = true
+# Source port for server reporting service (outgoing connection)
+# Should be set to 0 which means random port
+query_port = 0
+
+
+[gamespy.client]
+# Master server ip for client (game)
+# Option is used for overriding domain master server
+# server_address = "89.2.5.35:28910"
+# Set to false if you don't want to display and join to private ip servers
+# Setting to false is only recommended if you experience crashes.
+nat_traversal_enabled = true
+
+
+[gamespy.client.scan]
+# Serverlist scanning time will be advanced by `recv_time` when
+# master server network activity detected
+recv_time = 1.5

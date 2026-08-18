@@ -1,0 +1,35 @@
+v1.5.0:
+- ported all server mods from dedicated server to internal server
+- added server list fetching from Gamespy master server
+- added Gamespy NATNEG support to make possible joining to private ip servers
+- added hostname (DNS) support in `known_servers` list
+- added server list caching
+- increased max player number in LAN server creation menu
+v1.4.0:
+- refactored ping display option in .toml file
+- added more values to display in columns:
+  - accuracy
+  - kills/death balance
+  - kills/death side by side
+- columns data source can be configured via .toml
+- restored old kills counter (counter reset fix in dedicated server patch)
+v1.3.2:
+- changed kills counter source, old counter is not resetting on team swap
+v1.3.1:
+- fixed crashes when 13 or more players were on summary list
+v1.3.0:
+- fixed ping calucation in LAN server list. Before, servers always have green ping
+- added numeric ping display option
+- added colored ping display option
+- added kills and death statistics display option
+- added servers from:
+  https://github.com/AlfredoAnonym/COJ-BiB-Server-List-Mod
+  commit hash:
+  39bcf065ddd471b4e664773f8041a97dd9ed4af2
+v1.2.0:
+- added FOV changing option
+v1.1.0:
+- fixed crashing when loading custom map after techland map
+v1.0.0:
+- added configurable LAN serverlist
+- fixed joining issue when more network adapters are turned on

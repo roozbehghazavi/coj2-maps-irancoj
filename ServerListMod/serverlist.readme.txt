@@ -1,0 +1,9 @@
+Installation:
+
+
+1. Backup game files:
+    - CoJ2_x86.dll
+    - engine_x86.dll
+2. Extract all modded files from .zip into game directory and replace existing ones.
+3. To change default settings modify serverlist.toml.
+4. (Optional) If game is crashing on the start, then remove `Documents\Call of Juarez - Bound in Blood\Out\cache`
