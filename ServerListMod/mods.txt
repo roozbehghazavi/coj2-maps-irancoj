@@ -1,4 +1,4 @@
-; IranCoJ client mods — one DLL per line. ';' or '#' begins a comment.
+; Client mods — one DLL per line. ';' or '#' begins a comment.
 ; Files are loaded from this folder (next to dinput8.dll).
 
 voicechat.dll
