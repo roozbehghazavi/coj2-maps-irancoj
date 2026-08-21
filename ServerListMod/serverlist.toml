@@ -39,10 +39,7 @@ stats_column_2 = 'kd_ratio'
 # Is recommended to use server list fetched from gamespy services
 # You can safely remove it
 # Added two servers, old way, just in case. It will be removed in the next updates.
-known_servers = [
-    "51.77.44.173:27632",
-    "51.77.44.173:27634"
-]
+
 
 
 [serverlist.scan]
