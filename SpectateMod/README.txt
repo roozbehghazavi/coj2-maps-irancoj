@@ -1,13 +1,21 @@
-IranCoJ Spectate  v1.0.1 beta
+IranCoJ Spectate  v1.0.2 beta
 =============================
 
 Spectate other players while you are dead, from the multiplayer class-selection
 screen. Third person by default, first person optional.
 
 
-WHAT'S NEW IN 1.0.1
+WHAT'S NEW IN 1.0.2
 -------------------
-* Third-person camera now collides with the world. Indoors it pulls in towards
+* Closed doors now stop the camera. In 1.0.1 the camera collided with walls but
+  went straight through doors, which gave away the inside of a building just as
+  badly.
+* The camera no longer slips through a wall you are standing against. It could
+  drift out through the wall for a moment and then snap back; that is gone.
+
+WHAT WAS NEW IN 1.0.1
+---------------------
+* Third-person camera collides with the world. Indoors it pulls in towards
   the player instead of passing through walls, so it can no longer be used to
   see into rooms you are not in.
 
