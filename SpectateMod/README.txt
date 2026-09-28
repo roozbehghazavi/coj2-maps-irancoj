@@ -1,20 +1,41 @@
-IranCoJ Spectate  v1.0.2 beta
+IranCoJ Spectate  v1.0.4 beta
 =============================
 
 Spectate other players while you are dead, from the multiplayer class-selection
 screen. Third person by default, first person optional.
 
 
-WHAT'S NEW IN 1.0.2
+WHAT'S NEW IN 1.0.4
 -------------------
+* Fixed the big one. Clicking SPECTATE while you were alive used to put the
+  spectate bar up carrying a "you have to be dead first" message. That bar
+  hides the class screen, blocks the mouse and takes over clicks - so one
+  press, often an accidental one, left you unable to pick a class, unable to
+  shoot, and with further clicks changing spectated players until you died.
+  The button now simply does nothing while you are alive. Nothing is hidden,
+  nothing is blocked.
+* The mouse is never blocked except while you are actually spectating.
+
+WHAT WAS NEW IN 1.0.3
+---------------------
+* Fixed the mouse going dead mid-match. Spectate could arm itself during the
+  moment you are respawning - the game briefly looks the same as being dead -
+  and if it did, mouse BUTTONS stayed blocked for the rest of the match. You
+  could still look and move, but not shoot.
+* Fixed the engine's debug boxes and lines sticking to a player for the rest of
+  the match after that happened.
+* Spectate no longer opens by itself while you are respawning.
+
+AND IN 1.0.2
+------------
 * Closed doors now stop the camera. In 1.0.1 the camera collided with walls but
   went straight through doors, which gave away the inside of a building just as
   badly.
 * The camera no longer slips through a wall you are standing against. It could
   drift out through the wall for a moment and then snap back; that is gone.
 
-WHAT WAS NEW IN 1.0.1
----------------------
+AND IN 1.0.1
+------------
 * Third-person camera collides with the world. Indoors it pulls in towards
   the player instead of passing through walls, so it can no longer be used to
   see into rooms you are not in.
@@ -54,7 +75,8 @@ HOW TO USE
 ----------
 1. Join a multiplayer match.
 2. On the class-selection screen, press SPECTATE (next to the class buttons).
-   While you are alive it tells you that you have to be dead first.
+   While you are alive the button does nothing - spectating starts only once
+   you are dead.
 3. Once you are dead, the spectate bar appears:
 
        at the top:      <   [ watched player's name ]   >
